@@ -18,6 +18,10 @@ namespace LinqSamples
                 new Employee{ ID = 3, Name = "Sales1"}
             };
 
+            Console.WriteLine(developers.Count());
+
+            Console.WriteLine(sales.Count());
+
             Console.WriteLine("Hello World!");
         }
     }
