@@ -9,17 +9,15 @@ namespace Queries
         // to delcare it from the calleer is true i.e to declare what's going to be filtered.
         public static IEnumerable<T> Filter<T> (this IEnumerable<T> source, Func<T,bool> predicate)
         {
-            var result = new List<T>();
 
             foreach (var item in source)
             {
                 if (predicate(item))
                 {
-                    result.Add(item);
+                    yield return item;
                 }
             }
 
-            return result;
         }
     }
 }
